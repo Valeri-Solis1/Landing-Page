@@ -191,3 +191,80 @@ gap: 10px;
     text-align: center;
     padding: 15px;
 }
+
+
+/* MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-contenido {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    animation: aparecer 0.3s ease;
+}
+
+.modal-contenido h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.modal-contenido input,
+.modal-contenido select,
+.modal-contenido textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.btn-guardar {
+    background: linear-gradient(130deg,rgb(40, 84, 173),rgb(190, 161, 210));
+    margin-top: 20px;
+    padding: 18px 40px;   /* Más espacio interno */
+    font-size: 16px;      /* Texto más grande */
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.btn-cancelar {
+    margin-top: 20px;
+    padding: 18px 40px;   /* Más espacio interno */
+    font-size: 16px;      /* Texto más grande */
+    border: none;
+    background: linear-gradient(130deg,rgb(40, 84, 173),rgb(190, 161, 210));
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;  
+
+}
+
+
+.cerrar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+@keyframes aparecer {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}

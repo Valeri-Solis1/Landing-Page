@@ -7,8 +7,9 @@
     <title>Document</title>
     <link rel="icon" href="img/icono.png" type="image/png">
     <link rel="stylesheet" href="css/style.css">
-</head>
 
+</head>
+  
 <body>
     <!-- Header -->
     <header class="header" id="inicio">
@@ -31,9 +32,39 @@
         <div class="texto-header">
             <h1>Tu salud es nuestra prioridad</h1>
             <h2>Atención médica integral con calidad humana</h2>
-            <button class="button">Agendar cita</button>
+            <button id="btnCita" class="button">Agendar cita</button>
         </div>
     </header>
+
+    <!-- MODAL -->
+    <div id="modalCita" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar" id="cerrarModal">&times;</span>
+            <h2>Agendar Nueva Cita</h2>
+
+            <form id="formCita">
+                <input type="text" id="nombrePaciente" placeholder="Nombre del Paciente" required>
+                <input type="text" id="documento" placeholder="Documento" required>
+                
+                <select id="especialidad" required>
+                    <option value="">Seleccione especialidad</option>
+                    <option>Medicina General</option>
+                    <option>Pediatría</option>
+                    <option>Ginecología</option>
+                    <option>Odontología</option>
+                    <option>Psicología</option>
+                </select>
+
+                <input type="date" id="fecha" required>
+                <input type="time" id="hora" required>
+
+                <textarea id="motivo" placeholder="Motivo de la cita" required></textarea>
+
+                <button type="submit" class="btn-guardar">Guardar Cita</button>
+                <button type="button" class="btn-cancelar">Cancelar</button>
+            </form>
+        </div>
+    </div>
 
     <!-- SERVICIOS -->
     <section class="servicios" id="servicios">
